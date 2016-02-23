@@ -1,0 +1,11 @@
+
+{% if form.error %}<p><strong>INVALIDE USER OR MDP</strong></p>{% endif %}
+
+<form action="/auth" method="post">
+{% csrf_token %}
+<label for="username">Username :</label>
+<input type="text" name="username" id="username" value="" />
+<label for="password">password</label><br />
+<input type="password" name="password" id="password" value="" />
+<input type="submit" value="Login" />
+</form>
